@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: halal-binance-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install && mkdir -p data/trades
+    startCommand: node server.js
+    healthCheckPath: /api/health
